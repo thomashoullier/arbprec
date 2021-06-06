@@ -13,4 +13,14 @@
                  (:module "multiplication"
                   :depends-on ("words-op" "addition")
                   :components ((:file "naive")
-                               (:file "karatsuba" :depends-on ("naive"))))))))
+                               (:file "karatsuba" :depends-on ("naive")))))))
+  :in-order-to ((test-op (test-op "arbprec/test"))))
+
+(defsystem arbprec/test
+  :name "arbprec/test"
+  :author "Thomas HOULLIER"
+  :depends-on ("rove" "arbprec")
+  :components
+  ((:module "test"
+    :components ((:file "rove-suite"))))
+  :perform (test-op (o c) (symbol-call :rove '#:run-suite :arbprec/test)))
