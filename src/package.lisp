@@ -1,13 +1,25 @@
 (defpackage :arbprec
   (:use :cl)
   (:export
+   #:make-words
    ;; Readers and tests
    #:zero-p
    #:length-in-bits
+   ;; Words simple operations
+   #:words-ash
+   #:split
+   #:prune-zero-msb
    ;; Conversions
    #:to-integer
    #:to-bitvector
-   ))
+   ;; Comparisons
+   #:compare-words
+   ;; Operations
+   #:add-naive-words
+   #:subtract-naive-words
+   #:mul-words-naive
+   ;; Optimized multiplications
+   #:mul-words-karatsuba))
 
 (in-package :arbprec)
 ;; TODO: * Interface to get/set the word size.
