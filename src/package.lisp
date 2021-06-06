@@ -2,18 +2,22 @@
   (:use :cl)
   (:export
    #:make-words
+   #:get-word-size
+   #:set-word-size
    ;; Readers and tests
    #:zero-p
    #:length-in-bits
    ;; Words simple operations
    #:words-ash
    #:split
-   #:prune-zero-msb
    ;; Conversions
    #:to-integer
    #:to-bitvector
    ;; Comparisons
    #:compare-words
+   #:greater-than
+   #:less-than
+   #:same
    ;; Operations
    #:add-naive-words
    #:subtract-naive-words

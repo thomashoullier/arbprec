@@ -5,7 +5,7 @@
   ((:module "src"
     :components ((:file "package")
                  (:file "arbprec" :depends-on ("package"))
-                 (:file "words-op" :depends-on ("package"))
+                 (:file "words-op" :depends-on ("package" "arbprec"))
                  (:file "conversions" :depends-on ("package"))
                  (:file "compare" :depends-on ("package"))
                  (:file "addition" :depends-on ("package"))
