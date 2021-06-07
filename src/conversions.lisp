@@ -26,7 +26,7 @@
     bitvec))
 
 (defun prune-last-zeros-bitvector (bitvec)
-  "Prune the last zeros in a bitvector. Keep the zero for bigint zero."
+  "Prune the last zeros in a bitvector. Keep the zero for zero bitvec."
   (let ((last-one-pos 0))
     (loop named find-last-one for i from (1- (length bitvec)) downto 0 do
       (when (= (aref bitvec i) 1) (setf last-one-pos i)

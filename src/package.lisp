@@ -36,4 +36,5 @@
 (defun set-word-size (word-size)
   "Set a new word size for all arbprec."
   (setf *word-size* word-size
-        *max-word-int* (1- (expt 2 *word-size*))))
+        *max-word-int* (1- (expt 2 *word-size*)))
+  *word-size*)

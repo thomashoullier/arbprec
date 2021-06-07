@@ -19,7 +19,7 @@
 ;;; Readers and tests.
 (defun zero-p (words)
   "Does the vector of words represent a zero?"
-  ;; A zero should always be a single word of value zero, positive sign.
+  ;; A zero should always be a single word of value zero.
   (and (= (length words) 1) (= 0 (aref words 0))))
 
 (defun length-in-bits (words)
