@@ -19,6 +19,7 @@ undefined.
 
 ### Word size parameter
 **get-word-size** => *word-size*
+
 **set-word-size** *word-size* => *word-size*
 
 Reader and writer for the *word-size* parameter. *word-size* is expressed
