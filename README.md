@@ -101,7 +101,21 @@ always ends with a 1, except for the zero word.
 Compare two words. The result can be `'less-than` (*words1* < *words2*),
 `'greater-than` or `'same`.
 
-### Operations
+### Top-level operations
+These are the operations on words that should be used to interface
+with higher level programs. The lower-level methods for these operations
+are chosen depending on the size of the arguments.
+
+**add** *words1* *words2* => *added-words*
+
+**sub** *words1* *words2* => *subtraction*
+
+**mul** *words1* *words2* => *multiplied-words*
+
+See below for the lower-level methods these use.
+
+### Operations (lower-level)
+#### Naive
 **add-naive-words** *words1* *words2* => *added-words*
 
 Compute the addition of *words1* and *words2*.
@@ -116,7 +130,7 @@ Compute the subtraction of *words2* from *words1*. The case where
 Multiply *words1* and *words2*. Uses the naive `O(n^2)` method suitable
 for "small" numbers.
 
-### Optimized multiplication
+#### Optimized multiplication
 **mul-words-karatsuba** *words1* *words2* &key *size-thresh*
   => *multiplied-words*
 

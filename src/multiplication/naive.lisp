@@ -4,7 +4,6 @@
 (defun mul-words-naive (words1 words2)
   "Multiply two arrays of words together. LSB first. Naive O(n^2) method."
   ;; See Knuth TAOCP Section 4.3.1 Algorithm M.
-  ;; TODO: * Apply pruning of zero msb.
   (let* ((l1 (length words1)) (l2 (length words2))
          (reswords (make-array (+ l1 l2) :fill-pointer (+ l1 l2)
                                          :initial-element 0))

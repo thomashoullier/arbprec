@@ -4,7 +4,6 @@
   "Subtract two arrays of words (LSB first). words1 - words2, with
    words1 >= words2, it is also assumed that no zero msb are present.
    Naive method with borrow."
-  ;; TODO: * Write a test for fixed bug: #(0 2) - #(1)
   (let* ((l1 (length words1))
          (reswords (make-array l1 :fill-pointer 0))
          (borrow 0) (tmp 0) (cur-ind 0))

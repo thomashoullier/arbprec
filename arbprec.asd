@@ -13,7 +13,9 @@
                  (:module "multiplication"
                   :depends-on ("words-op" "addition")
                   :components ((:file "naive")
-                               (:file "karatsuba" :depends-on ("naive")))))))
+                               (:file "karatsuba" :depends-on ("naive"))))
+                 (:file "operations"
+                  :depends-on ("addition" "subtraction" "multiplication")))))
   :in-order-to ((test-op (test-op "arbprec/test"))))
 
 (defsystem arbprec/test

@@ -23,7 +23,9 @@
    #:subtract-naive-words
    #:mul-words-naive
    ;; Optimized multiplications
-   #:mul-words-karatsuba))
+   #:mul-words-karatsuba
+   ;; Top-level operations
+   #:add #:sub #:mul))
 
 (in-package :arbprec)
 
